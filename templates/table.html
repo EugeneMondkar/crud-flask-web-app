@@ -1,0 +1,28 @@
+
+<table class="table table-success table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>E-Mail</th>
+        <th>Phone</th>
+        <th>Action</th>
+    </tr>
+
+    {% for record in students %}
+    <tr>
+        <td>{{record.0}}</td>
+        <td>{{record.1}}</td>
+        <td>{{record.2}}</td>
+        <td>{{record.3}}</td>
+        <td>
+            <a href="#" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEdit{{ record.0 }}">Edit</a>
+            <a href="delete/{{ record.0 }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete student?')">Delete</a>
+        </td>
+    </tr>
+
+    {% include 'modal_edit.html' %}
+
+    {% endfor  %}
+
+</table>
+

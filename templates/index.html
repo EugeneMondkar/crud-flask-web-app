@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Home{% endblock %}
+
+
+{% block body %}
+
+<div class="container d-grid gap-3">
+
+    <div class="row">
+
+        {% include 'header.html' %}
+
+    </div>
+    <div class="row">
+        
+        <div class="col md-12">
+
+            <h2>
+                Student List
+                <button class="btn btn-success float-end" type="button" data-bs-toggle="modal" data-bs-target="#modalCreate">Add Student</button>
+
+            </h2>
+
+            {% include 'flash_messages.html' %}
+
+            {% include 'table.html' %}
+
+        </div>
+
+
+        {% include 'modal_create.html' %}
+        
+
+    </div>
+
+    
+
+    
+</div>
+
+    
+
+{% endblock %}

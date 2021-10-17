@@ -1,0 +1,40 @@
+<div class="modal fade" id="modalCreate">
+
+    <div class="modal-dialog">
+        
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h4 class="modal-title">Add New Student</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form class="d-grid gap-3" action="{{ url_for('insert') }}" method="POST">
+                    <div class="form-group">
+                        <label for="">Name:</label>
+                        <input type="text" class="form-control" name="name" required="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="">E-Mail:</label>
+                        <input type="text" class="form-control" name="email" required="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Phone:</label>
+                        <input type="text" class="form-control" name="phone" required="1">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Add Student</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-default" data-bs-dismiss="modal">Close</button>
+            </div>
+        
+        </div>
+    </div>
+</div>
